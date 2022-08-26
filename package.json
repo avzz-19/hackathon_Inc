@@ -1,0 +1,24 @@
+{
+  "name": "hackathonproject",
+  "version": "1.0.0",
+  "description": "ktui, fyuku,jj hjkug",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/avzz-19/hackathon_Inc.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/avzz-19/hackathon_Inc/issues"
+  },
+  "homepage": "https://github.com/avzz-19/hackathon_Inc#readme",
+  "dependencies": {
+    "dom": "^0.0.3",
+    "next": "^12.2.5",
+    "react": "^18.2.0"
+  }
+}
