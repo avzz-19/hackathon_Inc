@@ -3,12 +3,14 @@ import main1 from '../img/main1.png';
 import logo from '../img/logo.png';
 export const Header=()=>{
     return(
+        <>
     <Image
         src={logo}
         alt="logo"
         width={53}
         height={52}
       />
+      </>
     )
 }
 export const MainImage = () => {
