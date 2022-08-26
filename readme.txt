@@ -1,3 +1,0 @@
-ktui,
-fyuku,jj
-hjkug
