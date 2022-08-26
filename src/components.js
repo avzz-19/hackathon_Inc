@@ -81,11 +81,11 @@ export const Footer = () => {
 };
 
 export const Dropdown = (props) => {
-  //console.log({props})
+  console.log(props.options[0])
   return (
     <div>
       <select>
-        {props.options?.map((m) => (
+        {props.options[0].map((m) => (
           <option value={m}>{m}</option>
         ))}
       </select>
@@ -111,7 +111,7 @@ export const InputComponent = (props) => {
       <div
       style={{
         display: "flex",
-        flexDirection: (props.type === "text")? "column" : "row",
+        flexDirection: (props.yolo === "yolo")? "column" : "row",
       }}
     >
       <TextComponent CustomTag="div"
@@ -121,3 +121,9 @@ export const InputComponent = (props) => {
     </div>
     );
   };
+
+export const DatePick=()=>
+{   return <div><label>{<TextComponent label="DOB-(DD/MM/YY)" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}/>}</label>
+            <input type="date" name="DOB"/>
+            </div>
+}

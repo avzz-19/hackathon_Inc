@@ -17,6 +17,10 @@ export const Header = () => {
           margin: "0",
           display: "flex",
           padding: "10px",
+          position:"fixed",
+          width:"100%",
+          marginTop:0,
+          marginBottom:"50px"
         }}
       >
         <div
@@ -60,16 +64,16 @@ export const Header = () => {
   );
 };
 export const MainImage = () => {
-  return <Image src={main1} alt="Picture main" width={400} height={400} />;
+  return <Image src={main1} alt="Picture main" width={400} height={400}/>;
 };
 
 export const App = () => {
   return (
     <>
       <Header />
-      <div style={{alignItems:"center",justifyContent:"center",display:"flex",flexDirection:"column",marginTop:"50px"}}>
+      <div style={{alignItems:"center",justifyContent:"center",display:"flex",flexDirection:"column",paddingTop:"150px"}}>
       <MainImage/>
-      <TextComponent label="There are no schedules get started by creating schedules" styleProps={{fontWeight:"600px",paddingBottom:"20px"}}/>
+      <TextComponent label="There are no schedules get started by creating schedules" styleProps={{fontWeight:"600px",paddingBottom:"20px",marginTop:"50px"}}/>
       <Link href="/page2"><a><Button  buttonText={<TextComponent label="+   Create New"/>}/></a></Link>
       </div>
       <Footer/>
