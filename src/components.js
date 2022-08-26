@@ -79,3 +79,14 @@ export const Footer = () => {
     </footer>
   );
 };
+export const Dropdown = (props) => {
+    return (
+      <div>
+        <select>
+          {props.options?.map((m) => (
+            <option value={m}>{m}</option>
+          ))}
+        </select>
+      </div>
+    );
+  };

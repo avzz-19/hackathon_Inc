@@ -3,8 +3,9 @@ import main1 from "../img/main1.png";
 import logo from "../img/logo.png";
 import { TextComponent ,Button, Footer} from "./components";
 import { FaUserCircle } from "react-icons/fa";
+import Link from 'next/link'
 
-const Header = () => {
+export const Header = () => {
   return (
     <>
       <div
@@ -50,10 +51,10 @@ const Header = () => {
           />
         </div>
         <div>
-          <FaUserCircle size="35px" style={{paddingLeft:"600px",paddingTop:"30px",justifyContent:"center",alignItems:"center"}}/>
-          
+          <FaUserCircle size="35px" style={{paddingLeft:"600px",paddingTop:"5px",justifyContent:"center",alignItems:"center"}}/>
+          </div>
           <TextComponent label="Waseem" CustomTag="span" styleProps={{padding:"10px",fontSize:"20px",justifyContent:"center",alignItems:"center"}}/>
-        </div>
+        
       </div>
     </>
   );
@@ -69,7 +70,7 @@ export const App = () => {
       <div style={{alignItems:"center",justifyContent:"center",display:"flex",flexDirection:"column",marginTop:"50px"}}>
       <MainImage/>
       <TextComponent label="There are no schedules get started by creating schedules" styleProps={{fontWeight:"600px",paddingBottom:"20px"}}/>
-      <Button  buttonText={<TextComponent label="+   Create New"/>}/>
+      <Link href="/page2"><a><Button  buttonText={<TextComponent label="+   Create New"/>}/></a></Link>
       </div>
       <Footer/>
     </>
