@@ -4,7 +4,7 @@ export const TextComponent = ({
     children,
     CustomTag = "div",
 }) => (
-  <CustomTag style={styleProps}>
+  <CustomTag>
     {label}
     {children}
   </CustomTag>
