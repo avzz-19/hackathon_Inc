@@ -1,8 +1,15 @@
 import React from 'react'
+import { MainImage } from '../src/app'
+import {Header} from '../src/app'
 
 const index = () => {
   return (
-    <div>index</div>
+    <>
+    <div>
+        <Header/>
+    </div>
+    <MainImage/>
+    </>
   )
 }
 
