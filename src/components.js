@@ -135,3 +135,10 @@ export const DatePick=()=>
             <input type="date" name="DOB"/>
             </div>
 }
+
+export const Box=()=>
+{
+    return <div style={{border:"1px solid blue" ,display:"flex",width:"392px",height:"252px",borderRadius:"10px"}}>
+
+    </div>
+}
