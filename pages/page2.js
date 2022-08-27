@@ -22,7 +22,7 @@ export async function getServerSideProps() {
     `https://ws3wn6n4qi.execute-api.ap-south-1.amazonaws.com/department?branch=BE`
   );
   let data1 = await res1.json();
-  const data = [data0, data1];
+  const data = [data0,data1];
   console.log(data.branchNames);
   return { props: { data } };
 }
