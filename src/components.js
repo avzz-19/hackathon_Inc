@@ -84,9 +84,17 @@ export const Dropdown = (props) => {
   console.log(props.options[0])
   return (
     <div>
-      <select>
+      <select style={{display:"flex",
+flexDirection: "row",
+justifycontent: "center",
+alignitems: "center",
+padding: "10px 50px",
+gap: "16px",
+borderRadius:"5px",
+border:"1px solid #E8E8EA"
+}}>
         {props.options[0].map((m) => (
-          <option value={m}>{m}</option>
+          <option value={m} >{m}</option>
         ))}
       </select>
     </div>
@@ -123,7 +131,7 @@ export const InputComponent = (props) => {
   };
 
 export const DatePick=()=>
-{   return <div><label>{<TextComponent label="DOB-(DD/MM/YY)" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}/>}</label>
+{   return <div><label>{<TextComponent label="Date:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}/>}</label>
             <input type="date" name="DOB"/>
             </div>
 }

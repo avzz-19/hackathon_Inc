@@ -71,6 +71,16 @@ const Main2 = ({ data }) => {
               marginTop: "10px",
             }}
           />
+          <TextComponent
+            label="Exam Type"
+            styleProps={{
+              fontSize: "16px",
+              textAlign: "left",
+              fontWeight: 700,
+              paddingTop: "10px",
+            }}
+          />
+           <Dropdown options={[["Sem","model","internal"]]} />
         </div>
         <div style={{ display: "flex" ,flexDirection:"column" }}>
         <InputComponent
