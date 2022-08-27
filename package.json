@@ -20,10 +20,13 @@
   },
   "homepage": "https://github.com/avzz-19/hackathon_Inc#readme",
   "dependencies": {
+    "bootstrap": "^5.2.0",
     "dom": "^0.0.3",
     "next": "^12.2.5",
     "react": "^18.1.0",
+    "react-bootstrap": "^2.5.0",
     "react-dom": "^18.1.0",
+    "react-fontawesome": "^1.7.1",
     "react-icons": "^4.4.0",
     "reactjs-popup": "^2.0.5",
     "styled-components": "^5.3.5"

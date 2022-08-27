@@ -1,4 +1,6 @@
 import React from "react";
+import Link from "next/link";
+
 export const TextComponent = ({
   label,
   styleProps,
@@ -81,20 +83,23 @@ export const Footer = () => {
 };
 
 export const Dropdown = (props) => {
-  console.log(props.options[0])
+  console.log(props.options[0]);
   return (
     <div>
-      <select style={{display:"flex",
-flexDirection: "row",
-justifycontent: "center",
-alignitems: "center",
-padding: "10px 50px",
-gap: "16px",
-borderRadius:"5px",
-border:"1px solid #E8E8EA"
-}}>
+      <select
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifycontent: "center",
+          alignitems: "center",
+          padding: "10px 50px",
+          gap: "16px",
+          borderRadius: "5px",
+          border: "1px solid #E8E8EA",
+        }}
+      >
         {props.options[0].map((m) => (
-          <option value={m} >{m}</option>
+          <option value={m}>{m}</option>
         ))}
       </select>
     </div>
@@ -109,36 +114,110 @@ export const Picker = (props) => {
       name="date"
       min={props.min}
       max={props.max}
-      style={{margin:"15px", padding:"2px"}}
+      style={{ margin: "15px", padding: "2px" }}
     ></input>
   );
 };
 
 export const InputComponent = (props) => {
-    return (
-      <div
+  return (
+    <div
       style={{
         display: "flex",
-        flexDirection: (props.yolo === "yolo")? "column" : "row",
+        flexDirection: props.yolo === "yolo" ? "column" : "row",
       }}
     >
-      <TextComponent CustomTag="div"
-        label={props.label}
+      <TextComponent CustomTag="div" label={props.label} />
+      <span>
+        <input {...props}></input>
+      </span>
+    </div>
+  );
+};
+
+export const DatePick = () => {
+  return (
+    <div>
+      <label>
+        {
+          <TextComponent
+            label="Date:"
+            isMandatory="true"
+            styleProps={{
+              fontSize: "16px",
+              textAlign: "left",
+              fontWeight: 700,
+              paddingTop: "10px",
+            }}
+          />
+        }
+      </label>
+      <input type="date" name="DOB" />
+    </div>
+  );
+};
+
+export const Box = (props) => {
+  return (
+    <div
+      style={{
+        border: "1px solid black",
+        display: "flex",
+        width: "392px",
+        height: "252px",
+        borderRadius: "10px",
+        flexDirection:"column"
+      }}
+    >
+      <TextComponent
+        label={props.header}
+        styleProps={{
+          fontSize: "24px",
+          textAlign: "left",
+          fontWeight: 400,
+          margin: "10px",
+        }}
       />
-      <span><input {...props}></input></span>
+      {props.boole && (
+        <div
+          style={{
+            backgroundColor: "#FFA500",
+            height: "100px",
+            border: "1px solid #FFA500",
+            borderRadius:"10px",
+            justifyContent:"bottom",
+            marginTop:"105px",
+            padding:"10px",
+            display:"flex",
+            color:"white",
+            fontSize:"20px"
+          }}
+        >Not Allocated</div>
+      )}
+      {props.blue && (
+        <div
+          style={{
+            backgroundColor: "#5375E2",
+            height: "100px",
+            border: "1px solid #5375E2",
+            borderRadius:"10px",
+            justifyContent:"bottom",
+            marginTop:"105px",
+            padding:"10px",
+            display:"flex",
+            color:"white",
+            fontSize:"20px"
+
+          }}
+        >Allocated</div>
+      )}
+      {props.bools && (
+        <Link href="/page2">
+          <a>
+            <center><Button buttonText={<TextComponent label="+   Create New" />} /></center>
+          </a>
+        </Link>
+      )}
     </div>
-    );
-  };
-
-export const DatePick=()=>
-{   return <div><label>{<TextComponent label="Date:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}/>}</label>
-            <input type="date" name="DOB"/>
-            </div>
-}
-
-export const Box=()=>
-{
-    return <div style={{border:"1px solid blue" ,display:"flex",width:"392px",height:"252px",borderRadius:"10px"}}>
-
-    </div>
-}
+  );
+};
