@@ -166,7 +166,7 @@ export const Box = (props) => {
         width: "392px",
         height: "252px",
         borderRadius: "10px",
-        flexDirection:"column"
+        flexDirection: "column",
       }}
     >
       <TextComponent
@@ -178,21 +178,76 @@ export const Box = (props) => {
           margin: "10px",
         }}
       />
+      {!props.bools && (
+        <div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              fontWeight: 700,
+            }}
+          >
+            <TextComponent label="Branch" />
+            <TextComponent label="Department" />
+            <TextComponent label="Semester" />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              fontWeight: 400,
+            }}
+          >
+            <TextComponent label="BE" />
+            <TextComponent label="IT" />
+            <TextComponent label="3" />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              fontWeight: 700,
+              paddingTop:"25px"
+            }}
+          >
+            <TextComponent label="Subject" />
+            <TextComponent label="Lab" />
+            <TextComponent label="Exam Type" />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              fontWeight: 400,
+            }}
+          >
+            <TextComponent label="5" />
+            <TextComponent label="2" />
+            <TextComponent label="Semester" />
+          </div>
+        </div>
+      )}
       {props.boole && (
         <div
           style={{
             backgroundColor: "#FFA500",
             height: "100px",
             border: "1px solid #FFA500",
-            borderRadius:"10px",
-            justifyContent:"bottom",
-            marginTop:"105px",
-            padding:"10px",
-            display:"flex",
-            color:"white",
-            fontSize:"20px"
+            borderRadius: "10px",
+            justifyContent: "bottom",
+            marginTop: "30px",
+            padding: "10px",
+            display: "flex",
+            color: "white",
+            fontSize: "20px",
           }}
-        >Not Allocated</div>
+        >
+          Not Allocated
+        </div>
       )}
       {props.blue && (
         <div
@@ -200,21 +255,24 @@ export const Box = (props) => {
             backgroundColor: "#5375E2",
             height: "100px",
             border: "1px solid #5375E2",
-            borderRadius:"10px",
-            justifyContent:"bottom",
-            marginTop:"105px",
-            padding:"10px",
-            display:"flex",
-            color:"white",
-            fontSize:"20px"
-
+            borderRadius: "10px",
+            justifyContent: "bottom",
+            marginTop: "30px",
+            padding: "10px",
+            display: "flex",
+            color: "white",
+            fontSize: "20px",
           }}
-        >Allocated</div>
+        >
+          Allocated
+        </div>
       )}
       {props.bools && (
         <Link href="/page2">
           <a>
-            <center><Button buttonText={<TextComponent label="+   Create New" />} /></center>
+            <center>
+              <Button buttonText={<TextComponent label="+   Create New" />} />
+            </center>
           </a>
         </Link>
       )}
