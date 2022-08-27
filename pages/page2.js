@@ -428,7 +428,6 @@ const page2 = ({ data }) => {
           background: "#FBFBFB",
         }}
       >
-      console.log("hello");
         <Main2 data={data} />
        
        <Popupsave/>
